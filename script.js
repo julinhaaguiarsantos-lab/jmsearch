@@ -2,15 +2,15 @@ const profile=document.getElementById("profile"),startBtn=document.getElementByI
 let timer=null;
 const SIMULATION_TIME=300000;
 const results=[
-"SIMULAÇÃO CONCLUÍDA: o cenário fictício foi processado com sucesso. Este resultado não representa nenhuma ação real contra o perfil inserido. ✅⚠️",
-"SIMULAÇÃO FINALIZADA: o cenário fictício não pôde ser processado devido à alta quantidade de solicitações simuladas. Tente novamente. ❌"
+"ANÁLISE CONCLUÍDA: o cenário fictício foi processado com sucesso. Este resultado não representa nenhuma ação real contra o perfil inserido. ✅⚠️",
+"ANÁLISE FINALIZADA: o ataque não pôde ser processado devido à alta quantidade de solicitações. Tente novamente. ❌"
 ];
 function startSimulation(){
  const value=profile.value.trim(); errorBox.textContent="";
  if(!value){errorBox.textContent="> erro: insira um @usuário ou link para iniciar.";profile.focus();return}
  startBtn.disabled=true;profile.disabled=true;processBox.classList.remove("hidden");resultBox.classList.add("hidden");resetBtn.classList.add("hidden");
  let startTime=Date.now();terminalLine.textContent="> inicializando simulação...";
- const messages=["> validando entrada...","> criando ambiente virtual...","> processando dados fictícios...","> simulando sistema de bots...","> executando cenário demonstrativo...","> finalizando simulação..."];let messageIndex=0;
+ const messages=["> validando entrada...","> criando ambiente virtual...","> processando dados...","> preparando sistema de bots...","> executando...","> finalizando..."];let messageIndex=0;
  timer=setInterval(()=>{const elapsed=Date.now()-startTime,percent=Math.min(elapsed/SIMULATION_TIME*100,100);progress.style.width=percent+"%";percentage.textContent=Math.floor(percent)+"%";
  if(percent>10&&messageIndex===0)terminalLine.textContent=messages[++messageIndex];
  if(percent>25&&messageIndex===1)terminalLine.textContent=messages[++messageIndex];
