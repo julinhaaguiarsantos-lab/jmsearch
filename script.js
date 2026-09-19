@@ -2,8 +2,8 @@ const profile=document.getElementById("profile"),startBtn=document.getElementByI
 let timer=null;
 const SIMULATION_TIME=300000;
 const results=[
-"ANÁLISE CONCLUÍDA: o cenário fictício foi processado com sucesso. Este resultado não representa nenhuma ação real contra o perfil inserido. ✅⚠️",
-"ANÁLISE FINALIZADA: o ataque não pôde ser processado devido à alta quantidade de solicitações. Tente novamente. ❌"
+"ANÁLISE CONCLUÍDA: ATAQUE ENVIADO AO SISTEMA DE BOTS, ESSE PROCESSO É MAIS DEMORADO DEVIDO A ALTA DEMANDA DE SOLICITAÇÕES, POR ISSO, O TEMPO DE ESPERA É DE 72 HORAS PARA O PERFIL INSERIDO SAIR DO AR!. ✅⚠️",
+"ANÁLISE FINALIZADA: NÃO FOI POSSÍVEL ENVIAR O PERFIL AO SISTEMA DEVIDO A ALTA QUANTIDADE DE SOLICITAÇÕES NO SITE, TENTE NOVAMENTE. ❌"
 ];
 function startSimulation(){
  const value=profile.value.trim(); errorBox.textContent="";
